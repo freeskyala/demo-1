@@ -10,7 +10,7 @@ return [
     'SERVER_NAME'    => 'EasySwoole',
     'MAIN_SERVER'    => [
         'LISTEN_ADDRESS' => '0.0.0.0',
-        'PORT'           => 9501,
+        'PORT'           => 5602,
         'SERVER_TYPE'    => EASYSWOOLE_WEB_SOCKET_SERVER, //可选为 EASYSWOOLE_SERVER  EASYSWOOLE_WEB_SERVER EASYSWOOLE_WEB_SOCKET_SERVER,EASYSWOOLE_REDIS_SERVER
         'SOCK_TYPE'      => SWOOLE_TCP,
         'RUN_MODEL'      => SWOOLE_PROCESS,
@@ -41,8 +41,8 @@ return [
     ],
 
     // 当前的域名
-    'HOST'           => 'http://127.0.0.1:9501',
-    'WEBSOCKET_HOST' => 'ws://127.0.0.1:9501',
+    'HOST'           => 'http://127.0.0.1:5602',
+    'WEBSOCKET_HOST' => 'ws://127.0.0.1:5602',
 
 
     'CHECK_EMAIL'   => true,

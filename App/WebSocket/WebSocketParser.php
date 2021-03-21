@@ -26,6 +26,7 @@ class WebSocketParser implements ParserInterface
     {
         $caller = new Caller;
         // 聊天消息 {"controller":"broadcast","action":"roomBroadcast","params":{"content":"111"}}
+        var_dump(111,$raw);
         if ($raw !== 'PING') {
             $payload = json_decode($raw, true);
             $class = isset($payload['controller']) ? $payload['controller'] : 'index';

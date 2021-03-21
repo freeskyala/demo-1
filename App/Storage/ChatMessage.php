@@ -82,6 +82,7 @@ class ChatMessage
     private function createStorage()
     {
         $location = is_writeable('/dev/shm') ? '/dev/shm' : sys_get_temp_dir();
+        //$location = EASYSWOOLE_ROOT.'/Temp';
         $cache = $location . DIRECTORY_SEPARATOR . date('Ymd') . '.cached';
         if (file_put_contents($cache, 'a:0:{}', LOCK_EX)) {
             return $cache;

@@ -48,6 +48,7 @@ class EasySwooleEvent implements Event
         $conf->setParser(new WebSocketParser);
         $dispatch = new Dispatcher($conf);
         $register->set(EventRegister::onMessage, function (\Swoole\Server $server, \Swoole\WebSocket\Frame $frame) use ($dispatch) {
+            var_dump($frame->data);
             $dispatch->dispatch($server, $frame->data, $frame);
         });
     }
